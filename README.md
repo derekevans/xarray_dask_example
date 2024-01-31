@@ -1,9 +1,10 @@
-# Objective
+# xarray_dask_example
+## Objective
 
-The objective of this reposisitory is to demonstrate distributed computing using dask and xarray.  
+The objective of this reposisitory is to demonstrate distributed computing using xarray and Dask.  
 
 ## Docker Compose
-Docker Compose is used to create containers running Jupyter Lab, Dask Scheduler, and Dask Worker.  The purpose of using Docker Compose rather than using a Dask LocalCluster was to better resemble distributed computing across multiple nodes.  For this example, the cluster contains three worker nodes.  Each node has one worker process, three threads, and a memory limit of 4GB.  Also, a /data volume is created and attached to each container.
+Docker Compose is used to create containers running Jupyter Lab, Dask Scheduler, and Dask Worker.  The purpose of using Docker Compose rather than using a Dask LocalCluster was to better resemble distributed computing across multiple nodes.  For this example, the cluster contains three worker nodes.  Each node has one worker process, three threads, and a 4GB memory limit.  Also, a volume is created and attached to each container.
 
 ## Install
 
