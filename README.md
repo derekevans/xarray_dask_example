@@ -8,7 +8,7 @@ Docker Compose is used to create containers running Jupyter Lab, Dask Scheduler,
 
 ## Install
 
-To install the environment for this repo, you first need to have Docker Desktop installed.  Once installed:
+To install the environment for this repo, you first need to have Docker Desktop and make installed.  Once installed:
 
 ```sh
 git clone https://github.com/derekevans/xarray_dask_example
