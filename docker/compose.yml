@@ -1,0 +1,44 @@
+name: "xarray_dask"
+services:
+  jupyter:
+    build: 
+      context: ./
+      dockerfile: ./jupyter/Dockerfile
+    ports:
+      - "8890:8888"
+    volumes:
+      - type: bind
+        source: ../notebooks
+        target: /home/ubuntu/notebooks
+      - data:/home/ubuntu/data
+  scheduler:
+    build: 
+      context: ./
+      dockerfile: ./scheduler/Dockerfile
+    ports:
+      - "8788:8786"
+      - "8789:8787"
+    volumes: 
+      - data:/home/ubuntu/data
+  worker1:
+    build: 
+      context: ./
+      dockerfile: ./worker/Dockerfile
+    volumes: 
+      - data:/home/ubuntu/data
+  worker2:
+      build: 
+        context: ./
+        dockerfile: ./worker/Dockerfile
+      volumes: 
+      - data:/home/ubuntu/data
+  worker3:
+      build: 
+        context: ./
+        dockerfile: ./worker/Dockerfile
+      volumes: 
+      - data:/home/ubuntu/data
+volumes:
+  data:
+    
+  

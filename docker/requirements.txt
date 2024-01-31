@@ -1,0 +1,6 @@
+bokeh!=3.0.*,>=2.4.2
+dask==2024.1.1
+distributed==2024.1.1
+matplotlib==3.8.2
+netCDF4==1.6.5
+xarray==2024.1.1
